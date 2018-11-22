@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*undefined类型只有一个值*/
+    var age
+    var message;
+    alert(message);
+    alert(age);
+    /*对于未初始化变量和未声明变量执行typeof操作同样也会返回undefined*/
+    alert(typeof age);
+    alert(typeof message);
+    //逻辑上有合理性，虽然者两种变量从技术角度看有本质区别，但实际上无论对那种变量也不可能执行真正的操作
+    //推荐显示的初始化，这样当返回undefined时我们能够知道变量时没有声明而不是尚未初始化
+</script>
+</body>
+</html>

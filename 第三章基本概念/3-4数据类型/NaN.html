@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*即非数值这个数值用来本来要返回数值的操作数未返回的情况，不会抛出错误
+    * 任何设计NaN的操作都会返回NaN
+    * 其次NaN与任何值都不想等包括本身
+    *
+    * */
+    console.log("如果nan不等于nan则返回false"+(NaN==NaN));
+    /*
+    * 针具上述特点ECMAScript定义了isNaN函数。这个函数可以接受一个参数
+    * 这个参数可以是任何类型，可以帮我们确定这个参数确定不是数值
+    * 注意：任何不能转换成数值的值才会导致true然鹅isNaN会先尝试把转换成数值
+    * */
+    console.log("以下是isNaN()的例子");
+    alert(isNaN(NaN));
+    alert(isNaN("10")+"我本来是字符串哦因为能转换成10所以未false");
+    alert(isNaN(true)+"我本来是布尔值哦因为能转换成10所以未false");//布尔值的true转换成了1
+    alert(isNaN("blue"));
+    /*也可以用于对象*/
+    /*有三个函数可以把非字符串转换为数值
+    * Number(),
+    * parseInt(),
+    * ParseFloat();
+    * Number可以用于任何数据类型，剩下两种只用于字符串转换
+    * Number的转换规制{
+    * boolean转换成 true>1 false>2
+    * 数字简单的传入和返回
+    * undefined返回NaN
+    * 字符串转换
+    * 只包含数字，转换成十进制数字会忽略0
+    * 包含浮点格式转换成有效的浮点
+    * 十六进制转换成相应的十进制格式
+    * 字符串为空未0
+    * 包含以外的字符未NAN
+    * 对象则调用valueOf()的方法，依照墙面规则返回字如果nan则调用toString方法
+    * */
+    console.log(Number("hhhh1234"));
+    /*比较复杂而且不够合理更常用parseInt函数*/
+</script>
+</body>
+</html>

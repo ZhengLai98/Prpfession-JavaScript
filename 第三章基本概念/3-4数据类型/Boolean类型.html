@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*返回true和false*
+        该类型只有两个字面值：true和false。这两个值与数字不是以回事因此true不一定等于1,false不一定等于0
+        区分大小写：TUre和False都不是Boolean的值只是标识符
+        ECMSScript中所有类型的值都有与这恋歌Boolean值等价的值
+        转型函数Boolean（）
+     */
+    var message="helloword";
+    var messageAsBoolean=Boolean(message);
+    /*
+    * 对于String数据类型来说：除了空字符串""以外都是true
+    * 对于number来说：除了0和NAN都是true
+    * 对于对象来说除了null都是true
+    * undefinedn/a或N/A意思是不适用其他为undefined
+    *
+    * */
+    var message="Hello World";
+    if(message){
+        alert("Value is true");
+    }
+</script>
+</body>
+</html>

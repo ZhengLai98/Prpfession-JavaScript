@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*最引人关注*
+        除十进制外整数还可以 通过八进制以八为基数或以16为基数字面值来表示
+        八位进制第一位必须是0，然后是八进制数字序列（0~7）
+        超出范围将被当成十进制解析
+        严格模式下八进制无效会导致支持该模式的javaScript引擎抛出错误
+        十六进制前两位必须是0x(0-9,A-F)
+        在进行算术计算时都将被转换成十进制的数值
+        （+0，-0被认为相等）
+
+         */
+        console.log(+0===-0);
+        console.log(+0==-0);
+        /*浮点数值
+        * 因为保存浮点数值需要的内存空间是保存整数值的两倍，因此ECMAScript会不失时机的将浮点数值转换为整数值
+        * 小数点后面没有值和值为0都会转换成整数
+        * 科学记数法表示极大极小值
+        * e后面加数字，表示10的几次方
+        *
+        * */
+        var fN=1e7;
+        var fN2=3e8;
+        console.log("*****"+fN+"科学计数法demo");
+        console.log(`****es6模板字符串科学计数法${fN2}`);
+        /*注意e前面一定要有数值哪怕是1不然会报错undefined*/
+        /*默认情况下ECMAScript会将那些小数点后带有6个零以上的浮点值转换成e表示法，浮点最高精度是17为
+        但是在计算精度上远远不如整数
+        *
+        * */
+        console.log("我是小数精度"+(0.1+0.2));//我是小数精度0.30000000000000004千万不要把小数加小数等于一个小数放在if条件语句内
+        /*！！！！永远不要测定某个特定的浮点数值*/
+
+        /*数值范围
+        * 由于内存问题ECMASCript并不能保存世界上所有的数值
+        * 最小数值保存在Number.MIN_VALUE中大多数为5e-324
+        * 最大数值保存在在Number.MAX_VALUE中
+        * 如果计算结果超出了JavaScript值
+        * 自动转换成特殊的Infinity
+        * 复数转换成-Infinity
+        * 想证明一个数值是不是有穷的换句话说是不是位于最小和最大值之间
+        * 可以用isFinite()函数在最大值和最小值之间会返回true
+        *
+        * */
+        console.log("下面是isFinite的例子");
+        var result=Number.MAX_VALUE+Number.MAX_VALUE;
+        alert(isFinite(result));
+        console.log("得到正负infinity的值");
+        console.log(Number.NEGATIVE_INFINITY);//-Infinity
+        console.log(Number.POSITIVE_INFINITY);//Infinity
+    </script>
+</body>
+</html>
