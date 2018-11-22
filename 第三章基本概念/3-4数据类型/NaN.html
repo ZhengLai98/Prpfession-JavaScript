@@ -42,6 +42,24 @@
     * */
     console.log(Number("hhhh1234"));
     /*比较复杂而且不够合理更常用parseInt函数*/
+    /*parseInt转换规则
+    它会忽略字符串前面的空格一直往下找
+    产生了两种情况，第一种不是数字字符或者负号，gg返回NAN
+    第二种是一直到最后一个数字字符
+    * 与number不同它对于空字符串会产生nan而不是0
+    * 也能够识别16进制和8进制
+    * 现在的版本好像不支持八进制了
+    *
+    * */
+    console.log("现在的ECMAScript好像不支持八进制了但是对十六进制还是支持的摸摸哒");
+    console.log(parseInt("070"));
+    console.log(parseInt("0xA"));
+    console.log("但是我依然想用八进制可以给patseInt传入第二个参数嘻嘻下面为一个八进制的例子");
+    console.log(parseInt("77",8));
+    //多数情况下我们解析的都是十进制的值所以始终将10作为第二个参数是非常必要的
+    /*parseFloat没有第二个参数基数用法只能解析十进制值*/
+    console.log(parseFloat("0xA"));
+    console.log(parseFloat("001.1.1"));
 </script>
 </body>
 </html>
