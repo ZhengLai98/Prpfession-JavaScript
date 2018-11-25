@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 创建array
+    * 可以new Array(0)\
+    * 也可以省略array
+    *
+    * 数组的length不是只读的
+    *因此可以通过设置这个属性，
+    * 可以从数组的末尾一处项或向数组中添加新项
+    *用instanceof检测数组的问题如下：
+    * 如果网页中包含多个框架
+    * 那就实际上存在两个不同的全局执行环境
+    * 从而存在两个不同版本的array构造函数
+    * 如果你从一个框架向另一个框架传入了数组
+    * 那么传入的数组在第二个框架中原生创建的数组分别具有各自不同的构造函数
+    *
+    * 为了解决instanceof的问题ECMAScript5新增加了
+    * Array.isArray()的方法、
+    * 这个方法的目的是最终确定某个是到底是不是数组而不管它是在哪个全局执行环境中创建的
+    * 用法如下
+    * Array.isArray(valye)
+    * */
+</script>
+</body>
+</html>

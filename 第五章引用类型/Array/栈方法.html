@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*Lifo后进先出(Last in First out)
+    * 通过push()和pop()方法实现类似栈的行为
+    *push返回位置pop返回值
+    *
+    * */
+    var colors=new Array();
+    var count=colors.push("red","green");
+    alert(count);
+    count=colors.push("black");
+    alert(count);
+    var item=colors.pop();
+    alert(item);
+    alert(colors.length);
+</script>
+</body>
+</html>

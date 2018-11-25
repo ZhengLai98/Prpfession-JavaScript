@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 数组继承的toLocalString(),toString()和valueOf()方法
+    * 在默认的情况下都会以逗号分隔的字符串形式返回数组
+    * 如果使用join方法十只接收一个参数即用作分隔符的字符串然后放回包含所有数组项的字符串
+    * 如果不给join()传值或者传入undifined则默认用,分割
+    *单数传入null依然用null分割
+    * 如果数组中的某一项为null或者是undefined中那么该值在这些方法授内阁以空字符串表示
+    *
+    * */
+    var colors=["red","blue","green"];
+   console.log(colors.join("-"));
+   console.log(colors.join(undefined));
+   console.log(colors.join(null));
+</script>
+</body>
+</html>
