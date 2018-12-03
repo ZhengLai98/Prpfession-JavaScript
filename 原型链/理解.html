@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 要理解原型链先说构造函数，原型、和实例之间的关系
+    * 每个构造函数都有一个原型对象，而每个原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针，
+    * 当让原型对象等于另一个类型的实例
+    * 此时原型对象将包含一个指向另一个原型的指针，
+    * 相应的，另一个原型中也包含着一个指向另一个构造函数的指针
+    * demo
+    * */
+    function SuperType() {
+        this.property=true;
+    }
+    SuperType.prototype.getSupervalue=function () {
+        return this.property;
+    }
+    function SubType() {
+        this.subproperty=false;
+    }
+    SubType.prototype=new SuperType();//当让原型对象等于另一个类型的实例
+    SubType.prototype.getSubValue=function () {
+        return this.subproperty;
+    }
+    var instance=new SubType();
+    alert(instance.getSubValue());
+</script>
+</body>
+</html>
