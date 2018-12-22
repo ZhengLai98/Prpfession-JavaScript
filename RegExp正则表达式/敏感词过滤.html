@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="filtering-of-sensitive-words">
+    <h3>敏感词过滤</h3>
+    <p>替换前</p>
+    <textarea name="before" id="before" cols="30" rows="10"></textarea>
+    <input type="button" value="确定" id="input1">
+    <p>替换后</p>
+    <textarea name="after" id="after" cols="30" rows="10"></textarea>
+</div>
+<script>
+    var obefore=document.getElementById("before");
+    var oafter=document.getElementById("after");
+    var obutton=document.getElementById("input1");
+    var re=/脏话|屏蔽|不好/g;
+    obutton.onclick=function () {
+        oafter.value=obefore.value.replace(re,"*");
+
+    }
+    
+</script>
+</body>
+</html>
