@@ -5,6 +5,29 @@
     <title>Title</title>
 </head>
 <body>
+<!--
+某天，盗贼小白给了盗贼小黑一个盒子，盒子像俄罗斯套娃一样，有 3 层嵌套：
+ 并且，他们约定了交易密码提取方式：小白将给小黑提供一串字符串，小黑只需要将字符串中的所有相连的数字找出来，然后把它们拼接成一个新数组，数组的第一项就是第一个盒子的密码，以此类推……
+eg:"abc123def456hash789" -> [123, 456, 789] - > [外层盒子1密码, 中间层盒子2密码, 最内层盒子3密码]
+-->
+<script>
+    window.onload=function () {
+        var str = "abc123def456hash789";
+        var regNumber=/\d+/g;
+        console.log(str.match(regNumber));
+        /*：校验用户名。该用户名只能包含字符、数字、下划线 (_) 和连接字符 (-)，并且用户名的长度最长为 12 位，
+       最短为 6 位。
+       *
+       * */
+        var regUser=/^[a-z0-9_-]{6,12}$/;
+        var userStr='abc-cba_abc';
+        if(regUser.test(userStr)){
+            console.log("用户名合法");
+        }else {
+            console.log("用户名不合法");
+        }
+    }
 
+</script>
 </body>
 </html>
