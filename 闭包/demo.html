@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 回调函数，实际上就是在使用闭包
+    * */
+    function foo(){
+        var a=2;
+        function baz() {
+            console.log(a);
+        }
+        bar(baz);
+    }
+    function bar(fu){
+        fu();
+    }
+    foo();
+//    无论通过何种手段将内部函数传递到所在的词法作用域以外，它都会持有对原始定义作用 域的引用，无论在何处执行这个函数都会使用闭包。
+
+</script>
+</body>
+</html>
