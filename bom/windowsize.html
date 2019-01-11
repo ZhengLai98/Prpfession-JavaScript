@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+   setTimeout(function () {
+       window.open("http//www.wrow.com","wroxWindow","height=400,width==400");
+       //参数1重新定向网址，参数二创建一个名为wrowwindow的窗口或框架，参数三控制窗口大小
+   },2000);
+    window.resizeTo(100,100);
+    var pageWith=window.innerWidth;
+    var pageHeight=window.innerHeight;
+    if(typeof pageWith!="number"){
+        if(document.compatMode=="CSS1Compat"){
+            pageWith=document.documentElement.clientWidth;
+            pageHeight=document.documentElement.clientHeight;
+
+        }else{
+            pageWith=document.body.clientWidth;
+            pageHeight=document.body.clientHeight;
+        }
+
+    }
+    console.log(pageWith);
+    console.log(pageHeight);
+    //对于移动设备window.innerWidth和window.innerHeight保存可见视口
+    //document.documentElement度量的是布局视口
+
+</script>
+</body>
+</html>
